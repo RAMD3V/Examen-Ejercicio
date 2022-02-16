@@ -10,18 +10,27 @@ public class Productos{
     @Column(unique = true , nullable = false )
     private Long id;
     private String nombre;
-    private Integer precio;
-    private Integer cantidad;
+    private Float precio;
+    private Float cantidad;//Al ser materiales varia la cantidad
     private String tipo_material;
-    public Integer getPrecio() {
-        return precio;
-    }
-    public Integer getCantidad() {
+
+
+    public Float getCantidad() {
         return cantidad;
     }
-    public void setCantidad(Integer cantidad) {
+
+    public Float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Float precio) {
+        this.precio = precio;
+    }
+
+    public void setCantidad(Float cantidad) {
         this.cantidad = cantidad;
     }
+
     public String getTipo_material() {
         return tipo_material;
     }
@@ -34,7 +43,5 @@ public class Productos{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void setPrecio(Integer precio) {
-        this.precio = precio;
-    }
+
 }
